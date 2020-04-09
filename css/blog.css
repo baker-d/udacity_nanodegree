@@ -1,0 +1,39 @@
+a {
+    color:#18aad6;
+    text-decoration: none;
+}
+
+.backButton{
+    width: 120px;
+    margin: 15px;
+}
+.blog h1{
+    text-align: center;
+}
+
+.blog h2{
+    text-align: left;
+    margin: 25px 60px 15px 60px;
+}
+.blogIMGS{
+    margin: auto;
+    display: flex;
+    background: darkslategrey;
+    width: 80%;
+    height: auto;
+    border: 1px solid crimson;
+}
+.author{
+    display: grid;
+}
+.author a{
+    text-align: center;
+}
+.avatar{
+    display: grid;
+    margin: 15px auto;
+    border: 1px solid crimson;
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+}

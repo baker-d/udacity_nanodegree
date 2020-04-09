@@ -1,0 +1,205 @@
+@import url("blog.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eff1f5;
+  color: #464e5b;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mobile */
+.container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "sd"
+    "main"
+    "ft";
+}
+
+header {
+  grid-area: hd;
+  padding: 30px;
+}
+
+header h1 {
+  margin-top: 25px;
+  text-align: center;
+  color: #5c4e4e;
+}
+
+.navbar {
+  grid-area: sd;
+  display: inline-flex;
+  padding: 15px;
+}
+
+.navbar a {
+  font-size: 24px;
+  display: flex;
+  color: #18aad6;
+  width: 100%;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.navbar a:hover {
+  font-weight: bolder;
+  color: #18aad6;
+  list-style-type: none;
+}
+.row {
+  display: inline-flex;
+}
+.nestedPost {
+  padding: 15px;
+}
+
+.blogPost img {
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.desc {
+  padding: 4px;
+  text-align: center;
+}
+
+.gallery {
+  grid-area: main;
+  padding: 0 6px;
+  float: left;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.footer {
+  grid-area: ft;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  
+}
+
+.newsletter {
+  margin: 5px auto;
+}
+
+@media screen and (max-width: 600) {
+  .nestedPost,
+  .navbar {
+    flex-direction: column;
+  }
+  .gallery {
+    width: 100%;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+  .container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 200px repeat(6, 1fr);
+    grid-template-rows: 150px 1fr 250px;
+    grid-template-areas:
+      "hd hd hd hd hd hd hd hd"
+      "sd main main main main main main main"
+      "ft ft ft ft ft ft ft ft";
+  }
+  header {
+    grid-area: hd;
+    background: #005a7e;
+  }
+  header h1 {
+    text-align: left;
+  }
+  .navbar {
+    grid-area: sd;
+    display: inline;
+    background: #002d3f;
+  }
+  .navbar a {
+    justify-content: left;
+  }
+  .row {
+    grid-area: main;
+    display: flex;
+    width: 100%;
+  }
+  .nestedPost img {
+    margin: 0;
+  }
+  .gallery {
+    display: flex;
+    width: 45%;
+    margin: 6px 15px;
+  }
+  .footer {
+    background: #005a7e;
+    grid-area: ft;
+  }
+}
+
+/* Large screens */
+/* Set up grid for blog post w/ blog titles (3 columns/2 rows [img/button(1st row)] [blog title/link(2nd row)])*/
+@media screen and (min-width: 1101px) {
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+      "hd hd hd hd hd hd hd hd"
+      "sd sd main main main main main main"
+      "ft ft ft ft ft ft ft ft";
+  }
+  .row{
+    grid-area: main;
+    
+  }
+  header{
+    background: #005a7e;
+  }
+  header  h1{
+    color: #eff1f5;
+    grid-area: hd;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .navbar{
+    grid-area: sd;
+    display: inline;
+    margin-right: 40px;
+    background: #002d3f;
+  }
+  .navbar a{
+    justify-content: right;
+
+  }
+  .footer{
+    grid-area: ft;
+    background: #005a7e;
+  }
+  .nestedPost{
+    width: 100%;
+  }
+  .gallery{
+    display: flex;
+    margin: 15px 35px;
+    width: 40%;
+  }
+}
+
+
+/* Large Screens */ /* */
+/* Color scheme */
+/* Responsive */ /* */
