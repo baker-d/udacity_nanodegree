@@ -1,0 +1,95 @@
+.card {
+  border: none;
+  padding: 8px;
+  box-shadow: 0 4px 8px 0 #444;
+  background-color: #f2f2f2;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.blogPost {
+  border: 1px solid black;
+}
+
+.blogPost p {
+  margin: 10px 15px;
+}
+
+.blogPost h2 {
+  text-align: center;
+  font-size: larger;
+  margin: 5px;
+}
+
+.blogPost img {
+  width: 240px;
+  height: 240px;
+}
+
+.desc {
+  text-align: center;
+}
+
+.row {
+  grid-area: main;
+  display: flex;
+}
+.gallery {
+  width: 100%;
+  margin: 15px 10px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .row {
+    grid-area: main;
+    margin: 0;
+    display: flex;
+  }
+
+  .card {
+    border: none;
+    padding: 12px;
+    box-shadow: 0 4px 8px 0 #444;
+    background-color: #f2f2f2;
+    display: inline;
+  }
+
+  
+  .gallery {
+    flex-direction: column;
+    column-count: 2;
+    padding: 0 10px;
+  }
+
+  .blogPost img {
+    width: 90%;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 901px) and (max-width: 1079) {
+  .row {
+    grid-area: main;
+    margin: 0;
+    display: flex;
+  }
+
+  .card-columns {
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .card {
+    border: none;
+    padding: 12px;
+    box-shadow: 0 4px 8px 0 #444;
+    background-color: #f2f2f2;
+  }
+
+  .blogPost img {
+    width: 240px;
+    height: 240px;
+  }
+}

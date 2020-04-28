@@ -8,72 +8,109 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="../css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/16760eb47f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
-        <header>
+        <header class="home">
             <h1>Blog Title</h1>
         </header>
-        <div class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </button>
         </div>
+        <div class="top">
+            <nav>
+                <ul>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+        </div>
+
         <div class="row">
-            <div class="nestedPost">
-                <div class="gallery">
-                    <div class="blogPost">
-                        <a href="blog.html">
-                            <img src="../images/blogIMGS/image.png" alt="Image description." />
-                        </a>
+            <div class="card-columns gallery">
+                <div class="card blogPost">
+                    <h2>Example Post</h2>
+                    <img src="../images/blogIMGS/240x240.png" class="blogIMGS" alt="240px X 240px placeholder image." />
+                    <p class="postPreview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="blog.html">
                         <h3 class="desc">Lorem ipsum</h3>
-                    </div>
+                    </a>
                 </div>
-                <div class="gallery">
-                    <div class="blogPost">
-                        <a href="blog.html">
-                            <img src="../images/blogIMGS/image.png" alt="Image description." />
-                        </a>
+                <div class="card blogPost">
+                    <h2>Example Post</h2>
+                    <img src="../images/blogIMGS/240x240.png" class="blogIMGS" alt="240px X 240px placeholder image." />
+                    <p class="postPreview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="blog.html">
                         <h3 class="desc">Lorem ipsum</h3>
-                    </div>
+                    </a>
                 </div>
-                <div class="gallery">
-                    <div class="blogPost">
-                        <a href="blog.html">
-                            <img src="../images/blogIMGS/image.png" alt="Image description."/>
-                        </a>
+                <div class="card blogPost">
+                    <h2>Example Post</h2>
+                    <img src="../images/blogIMGS/240x240.png" class="blogIMGS" alt="240px X 240px placeholder image." />
+                    <p class="postPreview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="blog.html">
                         <h3 class="desc">Lorem ipsum</h3>
-                    </div>
+                    </a>
                 </div>
-                <div class="gallery">
-                    <div class="blogPost">
-                        <a href="blog.html">
-                            <img src="../images/blogIMGS/image.png" alt="Image description." />
-                        </a>
+                <div class="card blogPost">
+                    <h2>Example Post</h2>
+                    <img src="../images/blogIMGS/240x240.png" class="blogIMGS" alt="240px X 240px placeholder image." />
+                    <p class="postPreview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="blog.html">
                         <h3 class="desc">Lorem ipsum</h3>
-                    </div>
+                    </a>
+                </div>
+                <div class="card blogPost">
+                    <h2>Example Post</h2>
+                    <img src="../images/blogIMGS/240x240.png" class="blogIMGS" alt="240px X 240px placeholder image." />
+                    <p class="postPreview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="blog.html">
+                        <h3 class="desc">Lorem ipsum</h3>
+                    </a>
+                </div>
+                <div class="card blogPost">
+                    <h2>Example Post</h2>
+                    <img src="../images/blogIMGS/240x240.png" class="blogIMGS" alt="240px X 240px placeholder image." />
+                    <p class="postPreview">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <a href="blog.html">
+                        <h3 class="desc">Lorem ipsum</h3>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <p>Sign up for our newsletter.</p>
-            <form action="" method="get" class="newsletter">
-                <div class="newsletter">
-                    <label for="name"></label>
-                    <input type="text" name="fName" id="name" value="Name" required>
-                </div>
-                <div class="newsletter">
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" value="Email" required>
-                </div>
-                <div class="newsletter">
-                    <input type="submit" value="Subscribe">
-                </div>
-            </form>
+        <!-- Footer w/ social media icons/links + button to subscribe -->
+        <footer>
+            <div class="socialIcons">
+                <a href="http://www.twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://www.facebook.com"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="http://www.linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+            <div class="subscribe">
+                <button>
+                    <a href="#">Subscribe</a>
+                </button>
+            </div>
             <h3>&copy; David Baker 2020</h3>
-        </div>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -87,8 +124,3 @@
 </body>
 
 </html>
-
-<!-- Create nav/menu + Add links to corresponding pages -->
-<!-- Create grid to organize blog post + link images to corresponding blog/IMG -->
-<!-- Add buttons[<][>] to [L] & [R] sides of page to go prev. or next blog post -->
-<!-- Add footer -->

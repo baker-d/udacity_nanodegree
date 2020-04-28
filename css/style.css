@@ -1,8 +1,12 @@
 @import url("blog.css");
+@import url("cards.css");
+@import url("author.css");
+@import url("footer.css");
 
 * {
   box-sizing: border-box;
 }
+
 
 body {
   background: #eff1f5;
@@ -13,193 +17,155 @@ body {
 
 /* Mobile */
 .container {
-  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "hd"
     "sd"
+    "srch"
     "main"
     "ft";
 }
 
 header {
   grid-area: hd;
-  padding: 30px;
 }
 
 header h1 {
-  margin-top: 25px;
+  display: block;
+  margin: 25px auto auto auto;
   text-align: center;
   color: #5c4e4e;
 }
 
-.navbar {
+.top {
   grid-area: sd;
-  display: inline-flex;
-  padding: 15px;
+  margin: 10px 0;
 }
 
-.navbar a {
-  font-size: 24px;
+nav ul {
   display: flex;
-  color: #18aad6;
-  width: 100%;
-  text-decoration: none;
+  flex-direction: row;
+  justify-items: center;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
 }
 
-.navbar a:hover {
-  font-weight: bolder;
+nav a {
+  font-size: medium;
+  text-decoration: none;
   color: #18aad6;
+  margin: auto;
+}
+
+.search {
+  display: flex;
+  grid-area: srch;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.search i {
+  margin: 0;
+}
+
+a:hover {
+  color: black;
   list-style-type: none;
 }
-.row {
-  display: inline-flex;
-}
-.nestedPost {
-  padding: 15px;
-}
 
-.blogPost img {
-  width: 100%;
-  height: 400px;
-  border: 1px solid black;
-  border-top-left-radius: 10%;
-  border-bottom-right-radius: 10%;
-}
-
-.desc {
-  padding: 4px;
-  text-align: center;
-}
-
-.gallery {
-  grid-area: main;
-  padding: 0 6px;
-  float: left;
-  width: 100%;
-  margin: 15px 0;
-}
-
-.footer {
-  grid-area: ft;
-  padding: 20px;
-  text-align: center;
-  color: black;
-  
-}
-
-.newsletter {
-  margin: 5px auto;
-}
-
-@media screen and (max-width: 600) {
-  .nestedPost,
-  .navbar {
-    flex-direction: column;
-  }
-  .gallery {
-    width: 100%;
-  }
-}
-
-/* Medium screens */
-@media screen and (min-width: 601px) and (max-width: 1100px) {
+@media only screen and (min-width: 600px) and (max-width: 900px) {
   .container {
-    margin: auto;
     display: grid;
-    grid-template-columns: 200px repeat(6, 1fr);
-    grid-template-rows: 150px 1fr 250px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
     grid-template-areas:
-      "hd hd hd hd hd hd hd hd"
-      "sd main main main main main main main"
+      "hd hd hd hd hd srch srch srch"
+      ". . sd sd sd sd . ."
+      "main main main main main main main main"
       "ft ft ft ft ft ft ft ft";
+    padding: 0;
+    margin: auto;
   }
+
   header {
     grid-area: hd;
-    background: #005a7e;
   }
-  header h1 {
+
+  .home h1 {
     text-align: left;
   }
-  .navbar {
-    grid-area: sd;
+
+  .top {
     display: inline;
-    background: #002d3f;
+    grid-area: sd;
   }
-  .navbar a {
-    justify-content: left;
-  }
-  .row {
-    grid-area: main;
-    display: flex;
+
+  nav {
+    margin-top: -10px;
     width: 100%;
   }
-  .nestedPost img {
-    margin: 0;
-  }
-  .gallery {
+
+  nav ul {
     display: flex;
-    width: 45%;
-    margin: 6px 15px;
+    flex-direction: row;
+    justify-items: left;
   }
-  .footer {
-    background: #005a7e;
-    grid-area: ft;
+
+  nav a {
+    justify-items: left;
+    height: auto;
+    font-size: larger;
+    margin: 10px auto 10px 0;
+  }
+
+  .search {
+    display: flex;
+    float: right;
+    margin-top: 27px;
+    width: 90%;
+    flex-direction: row;
+    margin-right: 10px;
+  }
+
+  .search i {
+    margin: 5px;
+  }
+
+  .search button {
+    border: none;
+    background-color: transparent;
   }
 }
 
-/* Large screens */
-/* Set up grid for blog post w/ blog titles (3 columns/2 rows [img/button(1st row)] [blog title/link(2nd row)])*/
-@media screen and (min-width: 1101px) {
+/* Large Screens */
+@media only screen and (min-width: 901px) and (max-width: 1079) {
   .container {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas:
-      "hd hd hd hd hd hd hd hd"
-      "sd sd main main main main main main"
+      "hd hd hd hd . . . srch"
+      ". . sd sd sd sd . ."
+      ". main main main main main main ."
       "ft ft ft ft ft ft ft ft";
+    margin: auto;
   }
-  .row{
-    grid-area: main;
-    
-  }
-  header{
-    background: #005a7e;
-  }
-  header  h1{
-    color: #eff1f5;
+  header {
     grid-area: hd;
-    text-align: left;
-    margin-left: 20px;
   }
-  .navbar{
-    grid-area: sd;
-    display: inline;
-    margin-right: 40px;
-    background: #002d3f;
-  }
-  .navbar a{
-    justify-content: right;
 
+  header h1 {
+    color: #444;
+    text-align: left;
+    margin: auto;
   }
-  .footer{
-    grid-area: ft;
-    background: #005a7e;
-  }
-  .nestedPost{
-    width: 100%;
-  }
-  .gallery{
-    display: flex;
-    margin: 15px 35px;
-    width: 40%;
+
+  nav {
+    grid-area: sd;
   }
 }
-
-
-/* Large Screens */ /* */
-/* Color scheme */
-/* Responsive */ /* */

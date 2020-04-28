@@ -5,54 +5,116 @@
     <title>Blog</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    ○○○☼○○
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/16760eb47f.js" crossorigin="anonymous"></script>
     <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header>
+    <div class="container-blog col-md">
+        <div class="blogHeader">
             <div class="backButton">
                 <button>
-                    <a href="index.html">Back to blog</a>
+                    <a href="index.html" class="previous round">&#8249;</a>
                 </button>
             </div>
-        </header>
+            <h1><u>Blog Title</u></h1>
+        </div>
         <!-- Blog goes here -->
-
-        <div class="blog">
-
-            <h1>Blog Title</h1>
-            <h2>Blog post</h2>
-            <img src="../images/blogIMGS/image.png" class="blogIMGS" alt="Lorem ipsum..." />
-            <div class="author">
-                <img src="../images/avatar/dkAvatar.png" class="avatar" alt="Dudley Kirk avatar." />
-                <a target="_blank" href="author.html">Dudley Kirk</a>
+        <section class="blog">
+            <div class="postInfo">
+                <h2>Blog post</h2>
+                <p class="leadIn">Aenean sed adipiscing diam donec adipiscing tristique risus.</p>
+                <img src="../images/blogIMGS/500x400.png" class="blogIMGS" alt="Photo placeholder." />
+                <p class="exImgCap"><q>This is an example of a caption for an image.</q></p>
+                <div class="author">
+                    <img src="../images/avatar/dkAvatar.png" class="avatar" alt="Dudley Kirk avatar." />
+                    <p>By <a target="_blank" href="#" class="authorLink">DUDLEY KIRK</a></p>
+                        <p class="datePublished">July 1st, 2011 04:30 AM PST
+                        </p>
+                        <div class="infoBox">
+                            <div class="authorBio">
+                                <h3>About Author</h3>
+                                <p><a target="_blank" href="author.html" class="authorLink">Dudley Kirk</a> is a
+                                    contributing writer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit turpis cursus in
+                                    hac. Eu feugiat pretium nibh ipsum consequat.</p>
+                            </div>
+                        </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Footer for Blog-->
-        <div class="footer">
-            <p>Sign up for our newsletter.</p>
-            <form action="" method="get" class="newsletter">
-                <div class="newsletter">
-                    <label for="name"></label>
-                    <input type="text" name="fName" id="name" value="Name" required>
+            <br />
+            <div class="breakdown infoBox">
+                <p>This example blog utilizes HTML, CSS and Bootstrap. </p>
+            </div>
+            <article>
+                <div class="textToIndent">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Phasellus faucibus scelerisque eleifend donec pretium. Augue
+                        neque gravida in fermentum et. Aenean sed adipiscing diam donec adipiscing tristique risus.
+                        Pretium lectus quam id leo in vitae turpis. Purus sit amet luctus venenatis lectus magna
+                        fringilla. Pretium lectus quam id leo. Commodo quis imperdiet massa tincidunt nunc pulvinar
+                        sapien et ligula. Iaculis eu non diam phasellus. Suspendisse potenti nullam ac tortor vitae.
+                    </p>
                 </div>
-                <div class="newsletter">
-                    <label for="email"></label>
-                    <input type="email" name="email" id="email" value="Email" required>
+                <div class="w3-panel w3-leftbar w3-light-grey">
+                    <p class="w3-large w3-serif">
+                        <i>"felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida."</i>
+                    </p>
+                    <p>- George A. Romero</p>
                 </div>
-                <div class="newsletter">
-                    <input type="submit" value="Subscribe">
+                <p>Neque convallis a cras semper auctor neque. Lobortis feugiatvivamus at augue eget arcu. Ut enim
+                    blandit volutpat maecena volutpat blandit aliquam etiam erat. Pellentesque pulvinar pellentesque
+                    habitant morbi tristique senectus et netus. Dui accumsan sit amet nulla.</p>
+                <div id="ulEx" class="listExample">
+                    <ul>
+                        <li>Aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin.</li>
+                        <li>Quis ipsum suspendisse ultrices gravida.</li>
+                        <li>Enim nulla aliquet porttitor lacus luctus accumsan tortor.</li>
+                    </ul>
                 </div>
-            </form>
-            <h3>&copy; David Baker 2020</h3>
-        </div>
+                <div id="olEx" class="listExample">
+                    <h4>Cras adipiscing enim eu turpis.</h4>
+                    <ol>
+                        <li>Posuere <b>lorem ipsum</b> dolor sit amet consectetur.</li>
+                        <li>Augue mauris augue neque gravida in.</li>
+                        <li>Tincidunt dui ut ornare lectus.</li>
+                    </ol>
+                </div>
+                <p>Vehicula ipsum a arcu cursus vitae. Nunc sed velit dignissim sodales ut eu sem integer vitae.
+                    Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Aliquet eget sit amet tellus cras
+                    adipiscing enim eu.</p>
+            </article>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <!-- Older/Newer post buttons -->
+            <div class="controlButtons">
+                <button class="previousPost">
+                    <a href="blog.html" class="previous round">&#8249;</a>
+                </button>
+                <button class="nextPost">
+                    <a href="blog.html" class="next round">&#8250;</a>
+                </button>
+            </div>
+            <div class="socialIcons">
+                <a href="http://www.twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="http://www.facebook.com"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="http://www.linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+        </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
