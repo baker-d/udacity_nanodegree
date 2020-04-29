@@ -7,16 +7,16 @@
   box-sizing: border-box;
 }
 
-
 body {
   background: #eff1f5;
   color: #464e5b;
-  margin: 0;
+  margin: auto;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Mobile */
 .container {
+  width: fit-content;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -27,13 +27,13 @@ body {
     "ft";
 }
 
-header {
+.home {
   grid-area: hd;
 }
 
-header h1 {
+h1 {
   display: block;
-  margin: 25px auto auto auto;
+  margin: auto;
   text-align: center;
   color: #5c4e4e;
 }
@@ -41,16 +41,14 @@ header h1 {
 .top {
   grid-area: sd;
   margin: 10px 0;
+  display: block;
+  justify-content: center;
 }
 
 nav ul {
+  margin: auto;
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  margin: 0;
   padding-left: 0;
 }
 
@@ -93,17 +91,23 @@ a:hover {
     margin: auto;
   }
 
-  header {
+  .home {
     grid-area: hd;
+    width: 100%;
+    margin: auto;
   }
 
   .home h1 {
+    display: block;
+    margin: 50px auto 0 auto;
     text-align: left;
   }
 
   .top {
-    display: inline;
     grid-area: sd;
+    margin: 10px 0;
+    display: block;
+    justify-content: center;
   }
 
   nav {
@@ -112,25 +116,21 @@ a:hover {
   }
 
   nav ul {
+    margin: auto;
     display: flex;
     flex-direction: row;
-    justify-items: left;
+    padding-left: 0;
   }
 
   nav a {
-    justify-items: left;
-    height: auto;
     font-size: larger;
-    margin: 10px auto 10px 0;
+    margin: auto;
   }
 
   .search {
-    display: flex;
     float: right;
-    margin-top: 27px;
-    width: 90%;
-    flex-direction: row;
-    margin-right: 10px;
+    margin: 50px 0 0 auto;
+    width: 100%;
   }
 
   .search i {
@@ -146,20 +146,22 @@ a:hover {
 /* Large Screens */
 @media only screen and (min-width: 901px) and (max-width: 1079) {
   .container {
+    width: fit-content;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas:
-      "hd hd hd hd . . . srch"
-      ". . sd sd sd sd . ."
-      ". main main main main main main ."
+      "hd hd hd hd hd hd hd srch"
+      "sd sd sd sd sd sd sd sd"
+      "main main main main main main main main"
       "ft ft ft ft ft ft ft ft";
-    margin: auto;
+    margin: 0;
   }
-  header {
+
+  .home {
     grid-area: hd;
   }
 
-  header h1 {
+  .home h1 {
     color: #444;
     text-align: left;
     margin: auto;

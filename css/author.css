@@ -1,5 +1,54 @@
-.authorBio p{
-    text-align: left;
-    justify-content: center;
-    margin: 7px 5px;
+.authorBio p {
+  text-align: left;
+  margin: 5px 0 auto 5px;
+  font-size: small;
+}
+
+
+
+.author {
+  grid-area: auth;
+  max-width: 300px;
+}
+
+p.authorlink {
+  text-align: center;
+  margin: 0;
+}
+
+img.avatar {
+  display: block;
+  margin: 15px auto;
+  border: 1px solid crimson;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+
+.infoBox {
+  color: #444;
+  width: 90%;
+  margin: auto;
+  background-color: #d3d3d3;
+  padding: 5px;
+}
+
+.authorBio h3 {
+  margin: 5px;
+  font-size: medium;
+}
+
+.breakdown {
+  color: black;
+  width: 90%;
+  background-color: lightgrey;
+  margin: 0px auto 10px auto;
+}
+
+.breakdown p {
+  text-align: center;
+  margin: auto;
+  font-size: small;
+  display: block;
+  color: #888;
 }
