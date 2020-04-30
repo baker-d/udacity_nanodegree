@@ -4,13 +4,6 @@
   font-size: small;
 }
 
-
-
-.author {
-  grid-area: auth;
-  max-width: 300px;
-}
-
 p.authorlink {
   text-align: center;
   margin: 0;
@@ -51,4 +44,47 @@ img.avatar {
   font-size: small;
   display: block;
   color: #888;
+}
+
+@media only screen and (min-width: 901px) {
+  .blogImg_auth {
+    display: inline-grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 550px;
+    grid-template-areas: "post post post post post auth auth auth";
+    width: 90%;
+    margin-left: -10px;
+  }
+
+  .postInfo {
+    grid-area: post;
+    margin: auto 0 auto 50px;
+  }
+
+  .infoBox {
+    margin: 10px auto 5px auto;
+    background-color: #d4d4d4;
+  }
+
+  .back {
+    margin: 40px 0 0 10px;
+  }
+  
+  .author {
+    margin: auto 45px;
+    max-height: 400px;
+    border: none;
+    padding: 8px;
+    box-shadow: 0 4px 8px 0 #444;
+    background-color: #f2f2f2;
+    grid-area: auth;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  img.avatar {
+    margin-top: 0;
+  }
 }

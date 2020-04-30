@@ -20,6 +20,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-areas:
     "hd-b"
+    "auth"
     "main"
     "ft";
 }
@@ -50,7 +51,7 @@ h1 {
 .back {
   display: flex;
   flex-direction: row;
-  margin: 10px 0 0 -5px;
+  margin: 10px 0 0 auto;
 }
 
 .back a {
@@ -126,6 +127,7 @@ article {
     grid-template-rows: 1fr;
     grid-template-areas:
       "hd-b hd-b hd-b hd-b hd-b hd-b hd-b hd-b"
+      "auth auth auth auth auth auth auth auth"
       "main main main main main main main main"
       "ft ft ft ft ft ft ft ft";
     padding: 0;
@@ -149,7 +151,7 @@ article {
     margin: auto;
   }
 
-  .backButton {
+  .back{
     display: flex;
     flex-direction: row;
     margin: 20px 0 0 20px;
@@ -169,10 +171,12 @@ article {
   .container-blog {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
     grid-template-areas:
-      "hd-b hd-b hd-b auth auth auth"
-      "main main main main main main"
-      "ft ft ft ft ft ft";
+      "hd-b hd-b hd-b hd-b hd-b hd-b hd-b hd-b"
+      "main main main main main main main main"
+      "ft ft ft ft ft ft ft ft";
+      margin: auto;
   }
 
   .box {
@@ -181,24 +185,9 @@ article {
   }
 
   .postInfo img {
-    width: 500px;
-    height: 400px;
+    max-width: 500px;
+    max-height: 400px;
     border: 1px solid crimson;
     margin: 0 auto;
-  }
-
-  .blogImg_auth {
-    display: grid;
-  }
-
-  .postInfo {
-    display: grid;
-    float: left;
-
-  }
-
-  .author {
-    display: grid;
-    float: right;
   }
 }
